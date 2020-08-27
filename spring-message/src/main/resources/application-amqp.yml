@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-message-amqp
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+
+    template:
+      exchange: 'orders'
+      routing-key:

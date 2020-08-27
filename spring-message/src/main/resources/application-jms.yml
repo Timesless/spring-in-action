@@ -1,0 +1,14 @@
+
+
+spring:
+
+  application:
+    name: spring-message-jms
+
+  activemq:
+    broker-url: localhost:61616
+    in-memory: false
+
+  artemis:
+    host: localhost
+    port: 61616

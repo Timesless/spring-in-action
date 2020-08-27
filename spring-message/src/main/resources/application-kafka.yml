@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-message-kafka
+
+  kafka:
+    bootstrap-servers:
+      - localhost:9092
+
+    template:
+      default-topic: default-topic
