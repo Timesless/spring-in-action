@@ -4,7 +4,11 @@ spring:
 
   kafka:
     bootstrap-servers:
-      - localhost:9092
+      - 127.0.0.1:9092
 
     template:
-      default-topic: default-topic
+      default-topic: kafka-topic
+
+    # 设置消费者组名
+    consumer:
+      group-id: yangzl

@@ -1,0 +1,12 @@
+
+dependencies {
+    
+    implementation 'com.alibaba:fastjson:1.2.68'
+    
+    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+    
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    
+    // jsoup / tika
+    implementation 'org.jsoup:jsoup:1.13.1'
+}

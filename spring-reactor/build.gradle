@@ -1,0 +1,16 @@
+
+
+dependencies {
+
+    // implementation platform('io.projectreactor:reactor-bom:Bismuth-RELEASE')
+    
+    implementation 'io.projectreactor:reactor-core'
+    // reactive MongoDB
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+    // 嵌入式 MongoDB
+    implementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+
+    
+    testImplementation 'io.projectreactor:reactor-test'
+}

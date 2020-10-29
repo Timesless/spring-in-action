@@ -7,5 +7,5 @@ spring:
     port: 5672
 
     template:
-      exchange: 'orders'
-      routing-key:
+      exchange: 'rabbit-orders'
+      routing-key: rabbit-routing

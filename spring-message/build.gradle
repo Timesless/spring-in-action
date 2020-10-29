@@ -5,12 +5,12 @@ dependencies {
      *  1. JMS
      *  artemis 是重写的 activemq，使activemq成为遗留版
      */
-    compile 'org.springframework.boot:spring-boot-starter-activemq'
-    compile 'org.springframework.boot:spring-boot-starter-artemis'
+    implementation 'org.springframework.boot:spring-boot-starter-activemq'
+    implementation 'org.springframework.boot:spring-boot-starter-artemis'
 
     // 2. AMQP
-    compile 'org.springframework.boot:spring-boot-starter-amqp'
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
 
     // 3. Kafka
-    compile 'org.springframework.kafka:spring-kafka'
+    implementation 'org.springframework.kafka:spring-kafka'
 }

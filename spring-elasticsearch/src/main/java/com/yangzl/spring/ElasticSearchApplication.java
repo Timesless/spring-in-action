@@ -1,17 +1,18 @@
-package com.yangzl.springinaction;
+package com.yangzl.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @Author yangzl
- * @Date: 2020/8/27 10:13
- * @Desc:
+ * @author yangzl
+ * @date 2020/10/3 00:00
+ * @desc
  */
 
 @SpringBootApplication
-public class MessageApplication {
+public class ElasticSearchApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(MessageApplication.class, args);
+        SpringApplication.run(ElasticSearchApplication.class, args);
     }
 }
