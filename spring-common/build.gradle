@@ -1,0 +1,13 @@
+
+dependencies {
+    
+    implementation('org.springframework:spring-tx')
+
+    // Spring Reactor
+    implementation platform('io.projectreactor:reactor-bom:Bismuth-RELEASE')
+    implementation 'io.projectreactor:reactor-core'
+    
+    // Reactive X ==> RxJava
+
+    testImplementation 'io.projectreactor:reactor-test'
+}

@@ -1,6 +1,6 @@
 rootProject.name = 'spring-in-action5'
 include 'spring-integration'
 include 'spring-message'
-include 'spring-reactor'
 include 'spring-elasticsearch'
+include 'spring-common'
 

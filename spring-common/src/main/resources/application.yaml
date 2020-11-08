@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-common
+
+  # spring 异步任务线程池配置  
+  task:
+    execution:
+      pool:
+        core-size: 8
+        max-size: 64
+        queue-capacity: 512
+
+  # spring 调度任务线程池配置
+    scheduling:
+      pool:
+        size: 2
+
+
+server:
+  port: 10001
+  
