@@ -30,8 +30,8 @@ public class ESJDController {
     /**
      * 2020/10/3 分词搜索 
      * 
-     * @param 
-     * @return 
+     * @param keyword 关键词
+     * @return  List
      */
     @GetMapping("search/{keyword}")
     public List<Map<String, Object>> searchDocByKeyword(@PathVariable String keyword) {
@@ -48,8 +48,8 @@ public class ESJDController {
     /**
      * 2020/10/3 term 精确搜索 
      * 
-     * @param 
-     * @return 
+     * @param keyword 查询关键词
+     * @return List
      */
     @GetMapping("term/{keyword}")
     public List<Map<String, Object>> searchDocByTerm(@PathVariable String keyword) {

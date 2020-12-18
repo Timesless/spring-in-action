@@ -1,6 +1,8 @@
-rootProject.name = 'spring-in-action5'
+rootProject.name = 'spring-in-action'
+
+include 'spring-core'
+include 'spring-dao'
+include 'spring-elasticsearch'
 include 'spring-integration'
 include 'spring-message'
-include 'spring-elasticsearch'
-include 'spring-common'
 

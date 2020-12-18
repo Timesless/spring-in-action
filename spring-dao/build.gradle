@@ -7,7 +7,7 @@ dependencies {
     implementation platform('io.projectreactor:reactor-bom:Bismuth-RELEASE')
     implementation 'io.projectreactor:reactor-core'
     
-    // Reactive X ==> RxJava
+    // TODO Reactive X ==> RxJava
 
     testImplementation 'io.projectreactor:reactor-test'
 }

@@ -1,4 +1,4 @@
-package com.yangzl.spring.springinaction.config;
+package com.yangzl.spring.config;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.context.annotation.Bean;
@@ -8,8 +8,8 @@ import javax.jms.Destination;
 
 /**
  * @Author yangzl
- * @Date: 2020/8/27 10:46
- * @Desc:
+ * @Date 2020/8/27 10:46
+ * @Desc
  */
 
 @Configuration

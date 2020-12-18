@@ -14,14 +14,14 @@ import java.util.Map;
 
 /**
  * @Author yangzl
- * @Date: 2020/8/27 15:53
- * @Desc:
+ * @Date 2020/8/27 15:53
+ * @Desc
  *  RabbitMQ 由 Erlang开发， 安装前需安装Erlang
  */
 
 @Slf4j
 @Component
-public class MsgProducerServiceImpl implements MsgProducerService {
+public class MsgProducerServiceImpl implements com.yangzl.spring.springinaction.service.MsgProducerService {
     private Map<String, Object> map;
     {
         map = new HashMap<>(4);

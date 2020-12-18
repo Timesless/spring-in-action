@@ -1,6 +1,6 @@
-package com.yangzl.spring.springinaction.controller;
+package com.yangzl.spring.controller;
 
-import com.yangzl.spring.springinaction.listener.MsgConsumer;
+import com.yangzl.spring.listener.MsgConsumer;
 import com.yangzl.spring.springinaction.service.MsgProducerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @Author yangzl
- * @Date: 2020/8/27 15:52
- * @Desc:
+ * @Date 2020/8/27 15:52
+ * @Desc
  */
 
 @RestController
@@ -38,8 +38,7 @@ public class MQController {
 
     /**
      * 2020/8/27 本机暂时没有运行环境
-     * @param
-     * @return
+     * @return void
      */
     @GetMapping("/rabbit/send")
     public void rabbitSend() { }
@@ -51,8 +50,7 @@ public class MQController {
     }
     /**
      * 2020/8/27 发送日志消息
-     * @param
-     * @return
+     * @return String
      */
     @GetMapping("/jms/sendLog")
     public String jmsSendLog() {

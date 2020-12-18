@@ -1,23 +1,16 @@
 
-// 只作用于gradle构建
-buildscript {
-    subprojects {
-        // 所有子项目，执行完project（以groovy dsl运行build.gradle）
-        gradle.projectsEvaluated {
-            subprojects {
-                jar {
-                    enabled = true
-                }
-            }
-        }
-    }
-}
-
 plugins {
-    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'org.springframework.boot' version '2.3.5.RELEASE'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
 }
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 
 allprojects {
 
@@ -28,35 +21,23 @@ allprojects {
 
     group = 'com.yangzl'
     version = '1.0-SNAPSHOT'
+    sourceCompatibility = '1.8'
 
     apply plugin: 'java'
-    // spring 插件
-    apply plugin: 'org.springframework.boot'
-    // spring依赖管理
-    apply plugin: 'io.spring.dependency-management'
-
 }
 
-// 所有模块都打包为SpringBoot Jar形式
-bootJar {
-    enabled = false
-}
 
 // 作用于子模块
 subprojects {
 
+    // spring 插件
+    apply plugin: 'org.springframework.boot'
+    // spring依赖管理
+    apply plugin: 'io.spring.dependency-management'
+    
     // 声明变量
     ext {
         set('springCloudVersion', "Hoxton.SR6")
-    }
-
-    sourceCompatibility = '1.8'
-
-    // lombook需要可插拔式注解处理器
-    configurations {
-        compileOnly {
-            extendsFrom annotationProcessor
-        }
     }
 
     // 所有子模块都有这些依赖
@@ -78,7 +59,6 @@ subprojects {
             // 注意，groovy模板字符串只能用“”
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
             
-            // mavenBom "io.projectreactor:reactor-bom:Bismuth-RELEASE"
         }
     }
 

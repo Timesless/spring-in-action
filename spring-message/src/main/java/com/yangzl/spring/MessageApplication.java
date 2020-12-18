@@ -1,12 +1,12 @@
-package com.yangzl.spring.springinaction;
+package com.yangzl.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @Author yangzl
- * @Date: 2020/8/27 10:13
- * @Desc:
+ * @author yangzl
+ * @date 2020/8/27 10:13
+ * @desc
  */
 
 @SpringBootApplication
