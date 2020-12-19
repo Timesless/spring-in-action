@@ -1,0 +1,16 @@
+
+
+dependencies {
+
+    // Spring Reactor
+    implementation platform('io.projectreactor:reactor-bom:Bismuth-RELEASE')
+    implementation 'io.projectreactor:reactor-core'
+    
+    // RxJava
+    implementation "io.reactivex.rxjava3:rxjava:3.0.8"
+    
+    // WebFlux
+    implementation "org.springframework.boot:spring-boot-starter-webflux"
+
+    testImplementation 'io.projectreactor:reactor-test'
+}

@@ -5,4 +5,5 @@ include 'spring-dao'
 include 'spring-elasticsearch'
 include 'spring-integration'
 include 'spring-message'
+include 'spring-reactive'
 

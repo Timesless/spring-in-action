@@ -6,9 +6,10 @@ import org.springframework.integration.channel.DirectChannel;
 import org.springframework.messaging.MessageChannel;
 
 /**
- * @Author yangzl
- * @Date: 2020/8/27 10:46
- * @Desc:
+ * @author yangzl
+ * @date 2020/8/27 10:46
+ * @desc
+ *      用这两个bean来演示spring 启动流程
  */
 
 @Configuration

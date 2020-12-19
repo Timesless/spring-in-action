@@ -23,12 +23,19 @@
 > 3. WebSocket
 
 
-## spring-web-reactive 模块
-> web-reactive模块包含以下内容
+## spring-reactive 模块
+> reactive模块包含以下内容
 > 1. Spring WebFlux
 > 2. WebClient
 > 3. WebSocket
-> 
+
+#### features
++ Spring WebFlux is supported on Tomcat, Jetty, Servlet3.1+ containers, as well as non-Servlet runtimes such as Netty and Undertow
++ In Spring MVC (and servlet applications in general), it is assumed that applications can block the current thread, (for example, for remote calls). 
+  For this reason, servlet containers use a large thread pool to absorb potential blocking during request handling.
++ In Spring WebFlux (and non-blocking servers in general), it is assumed that applications do not block.
+  Therefore, non-blocking servers use a small, fixed-size thread pool (event loop workers) to handle requests.
+
 
 ## spring-integration 模块
 > integration模块包含以下内容：

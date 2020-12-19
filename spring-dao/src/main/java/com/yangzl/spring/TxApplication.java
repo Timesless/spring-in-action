@@ -1,4 +1,4 @@
-package com.yangzl;
+package com.yangzl.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
