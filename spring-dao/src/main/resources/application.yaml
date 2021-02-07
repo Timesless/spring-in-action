@@ -1,8 +1,8 @@
 spring:
   application:
-    name: spring-common
+    name: spring-dao
 
-  # spring 异步任务线程池配置  
+  # spring 异步任务线程池配置
   task:
     execution:
       pool:
@@ -15,7 +15,18 @@ spring:
       pool:
         size: 2
 
+  datasource:
+    # 默认配置 >> HikariConfig
+    hikari:
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/yangzl?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimeZone=GMT&allowMultiQueries=true
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 123456
+
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
+  type-aliases-package: com.yangzl.spring.entity
+
 
 server:
   port: 10001
-  

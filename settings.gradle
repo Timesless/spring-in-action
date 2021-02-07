@@ -6,4 +6,5 @@ include 'spring-elasticsearch'
 include 'spring-integration'
 include 'spring-message'
 include 'spring-reactive'
+include 'thread-pool-starter'
 

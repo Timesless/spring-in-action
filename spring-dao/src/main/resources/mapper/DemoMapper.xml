@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yangzl.spring.mapper.DemoMapper">
+
+    <resultMap id="poResultMap" type="com.yangzl.spring.entity.Demo">
+        <result property="id" column="ID"/>
+        <result property="name" column="NAME"/>
+        <result property="age" column="AGE"/>
+        <result property="sex" column="SEX"/>
+        <result property="gmtCreate" column="GMT_CREATE"/>
+        <result property="status" column="STATUS"/>
+    </resultMap>
+
+    <sql id="columns">
+        ID,
+		NAME,
+		AGE,
+		SEX,
+		GMT_CREATE,
+        STATUS
+    </sql>
+
+    <insert id="insertBatch" parameterType="Demo">
+        INSERT INTO a_demo(<include refid="columns"/>) VALUES
+        <foreach collection="list" item="item" separator="," close=";">
+            (#{item.id},
+            #{item.name},
+            #{item.age},
+            #{item.sex},
+            #{item.gmtCreate},
+            #{item.status})
+        </foreach>
+    </insert>
+
+
+</mapper>

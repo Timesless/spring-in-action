@@ -34,7 +34,7 @@ subprojects {
     apply plugin: 'org.springframework.boot'
     // spring依赖管理
     apply plugin: 'io.spring.dependency-management'
-    
+
     // 声明变量
     ext {
         set('springCloudVersion', "Hoxton.SR6")
@@ -47,23 +47,29 @@ subprojects {
          * compile：依赖会传递
          */
         implementation 'org.springframework.boot:spring-boot-starter-web'
-        compileOnly 'org.projectlombok:lombok'
-        annotationProcessor 'org.projectlombok:lombok'
-        
         implementation('org.springframework.boot:spring-boot-starter-test') {
             exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
         }
+        implementation 'cn.hutool:hutool-all:5.5.8'
+
+
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
     }
 
     dependencyManagement {
         imports {
             // 注意，groovy模板字符串只能用“”
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-            
+
         }
     }
 
     test {
         useJUnitPlatform()
+
+        doFirst {
+            jvmArgs "-XX:MetaspaceSize=128m", "-XX:MaxMetaspaceSize=128m", "-Xms1000m", "-Xmx1000m", "-Xmn400m"
+        }
     }
 }

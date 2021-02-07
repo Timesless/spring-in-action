@@ -1,0 +1,24 @@
+
+
+group = 'com.yangzl'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+apply plugin: 'java'
+// install需要maven插件，经测试install到目录${user}/.m2/
+apply plugin: 'maven'
+
+repositories {
+    mavenLocal();
+    mavenCentral();
+}
+
+
+jar {
+    manifest {
+        attributes "Main-Class": "com.yangzl.spring.StarterApplication"
+    }
+}
+
+
+

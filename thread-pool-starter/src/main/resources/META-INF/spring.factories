@@ -1,0 +1,3 @@
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.yangzl.spring.autoconfigure.threadpool.ThreadPoolAutoConfiguration
